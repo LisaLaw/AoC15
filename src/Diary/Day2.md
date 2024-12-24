@@ -42,3 +42,7 @@ I've tried to extract the vars from the for loop, but it doesn't seem to make a 
 Huh, the testing data return funny results with my code. It seems the very first calculation is off. Aha, and I know why!
 I've forgot to duplicate the dimensions.
 And that has fixed the problem! Yayyy, way to go.
+
+A sneak peak of part 2 makes my head spin... :D There is a lot of Maths in there.
+
+Yayy, part 2 was easy - a lot of reusable code from part 1. :) Done!
