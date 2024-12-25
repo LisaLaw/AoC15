@@ -54,3 +54,21 @@ Aha. I've made a mistake when renaming the vars.
 Yayy, success!
 
 Guess the twodimensional grid wasn't that scary after all.
+
+Huh, part 2 sounds complicated. But probably isn't too hard?
+I'm going to try to create two different vars for everything.
+To check who's moving I can divide the position by 2...
+Ugh, that feels ugly and I'm not even half done.
+Hm. That didn't work quite right. Let's see what the debugger says...
+Ok, mistake number 1 - I had `isSanta` wrong - I forgot that the count starts at 0 and not 1.
+Doesn't seem to make a difference though.
+Aha, I think I need to keep just one list of houses. It doesn't matter who was there, just that somebody was there.
+
+Hm, I'm not sure how to proceed here. It all looks correct and makes sense... Did I miss something?
+(Maybe rather, what did I miss?) The test data give the correct results...
+Maybe it is in fact a high number. I've just run the debugger through > 100 iterations, I'm starting to think this is not the most efficient way of doing this.
+
+So I will try a test case with a high starting number and see what happens.
+High numbers seem to work well. Hm.
+
+Next idea was to separate the lists again and then compare them. Curiously this leads to an even lower (wrong) result.
