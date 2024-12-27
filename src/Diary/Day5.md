@@ -32,3 +32,14 @@ returns undefined for all items...
 Alright, extracting another `isNaughty` var in the `hasNaughtySub()` function gives the desired results for the test data.
 
 Using the real input, I get a TypeError for .length. I'm adding a question mark to the regex function. And voilà, a count. And it's correct, yayy!
+
+Aaaand of course part 2 picks up on the double letter problematic. Let's see. The first rule seems more doable than the second, on first glance.
+So, rule 1: string has a repeated pair of letters, not overlapping. It doesn't have to be the same letter.
+Rule 2: a repeated letter with another in between. Perhaps that's actually easier, as I can reuse the `hasDoubleLetter()` function with a slight modification.
+
+Yup, rule 2 done.
+
+So onto rule 1. It's tricky. Basically, I have to check for the first and second letter; the second and third letter; the third and fourth letter and so forth and see if each pair has a second like it in the rest of the string.
+Ok the tricky part here was just getting the right substring.
+Test data is working well.
+Aaaaaand success! Yayyy.
