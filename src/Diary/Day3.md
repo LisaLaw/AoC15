@@ -72,3 +72,7 @@ So I will try a test case with a high starting number and see what happens.
 High numbers seem to work well. Hm.
 
 Next idea was to separate the lists again and then compare them. Curiously this leads to an even lower (wrong) result.
+
+Next problem: `89` for X and `7` for Y was giving the same result as `8` for X and `97` for Y.
+So now I've added an additional comma between the X and Y coordinates in the position.
+It adds a few houses but is still not the expected result.
