@@ -3,38 +3,29 @@ const inputData = fs.readFileSync('input.txt', 'utf-8').trim().split('\n');
 
 // console.log(inputData);
 
-let strCount = 0;
+let codeCharCount = 0;
 let allChars = 0;
 
 const countStrChars = () => {
   inputData.forEach((line) => {
     allChars = allChars + line.length;
-    const chars = line.slice(1, -1);
 
-    console.log('chars', chars);
+    for (let i = 0; i < line.length; i++) {
+      let char = line[i];
+      let nextChar = line[i + 1];
 
-    for (let i = 0; i < chars.length; i++) {
-      let char = chars[i];
-      let nextChar = chars[i + 1];
-      strCount++;
-
-      if (char === `\\` && nextChar === `\\`) {
-        console.log('slash');
+      if (char === '"') {
+        codeCharCount += 3;
+      } else if (char === '\\' && nextChar === 'x') {
+        codeCharCount += 3;
         i++;
-      }
-      if (char === `\\` && nextChar === `"`) {
-        console.log('"')
+      } else if (char === '\\') {
+        codeCharCount += 4;
         i++;
-      }
-      else if (char === '\\' && nextChar === 'x') {
-        console.log('hexa')
-        i = i + 3;
-      }
+      } else codeCharCount++;
     }
   });
 };
 
 countStrChars();
-
-console.log(allChars - strCount);
-
+console.log(codeCharCount - allChars);
